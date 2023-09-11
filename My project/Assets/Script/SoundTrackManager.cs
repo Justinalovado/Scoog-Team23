@@ -89,7 +89,7 @@ public class SoundTrackManager : MonoBehaviour
      * Update is called once per frame
      */
     public void Update() {
-        this.clockDisp.text = $"Clock: {this.clock}\nTick: {this.curTick}";
+        // this.clockDisp.text = $"Clock: {this.clock}\nTick: {this.curTick}";
         // TODO: run progress bar
         for (int i = 0; i < 5; i++){
             // this.counters[i].text = this.audioSources[i].time.ToString();
