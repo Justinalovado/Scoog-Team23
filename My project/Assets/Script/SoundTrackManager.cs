@@ -8,7 +8,7 @@ using System.Linq;
 
 public class SoundTrackManager : MonoBehaviour
 {
-    public TextMeshProUGUI clockDisp;
+    // public TextMeshProUGUI clockDisp;
     public List<AudioSource> audioSources;
     // public List<TextMeshProUGUI> counters; //TODO:replace with circle bars
     public List<Image> bars;
