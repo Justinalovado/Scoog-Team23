@@ -8,7 +8,7 @@ public class InstructionPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        // at start get instruction canvas as invisible
         GameObject instruction = GameObject.FindGameObjectWithTag("instruction").gameObject;
         instruction.transform.GetChild(0).gameObject.SetActive(false);
 
@@ -18,28 +18,22 @@ public class InstructionPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
     public void ClickInstructionButton()
     {
-        //GameObject main = GameObject.FindGameObjectWithTag("main").gameObject;
-        //main.transform.GetChild(0).gameObject.SetActive(true);
-        
-
+        // onclick to see instructions
         GameObject instruction = GameObject.FindGameObjectWithTag("instruction").gameObject;
         instruction.transform.GetChild(0).gameObject.SetActive(true);
 
-       // instruction.transform.SetAsLastSibling();
-        //instruction.transform.GetChild(0).gameObject.transform.SetAsLastSibling();
+
     }
 
     public void ClickReturnButton()
     {
-        //GameObject main = GameObject.FindGameObjectWithTag("main").gameObject;
-        //main.transform.GetChild(0).gameObject.SetActive(true);
-
+        // onclick return to main scene
         GameObject instruction = GameObject.FindGameObjectWithTag("instruction").gameObject;
         instruction.transform.GetChild(0).gameObject.SetActive(false);
 
