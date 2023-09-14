@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Start Scene.unity
-    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+    path: Assets/Scenes/Bird Singing Scene.unity
+    guid: 56a296bff1ca40e219dd5939b7eb904a
   - enabled: 1
-    path: Assets/Scenes/Nature Sound Sence.unity
-    guid: be5d64a8538b0374c94b84ee740264e8
+    path: Assets/Scenes/Classical.unity
+    guid: a4811e5a728f2654aa37bea9b2c6f67a
   - enabled: 1
-    path: Assets/Scenes/Personalized Sence.unity
-    guid: b255d178a05373549b9d037832f5b553
+    path: Assets/Scenes/Instrument.unity
+    guid: e6cd1bd1f1e610b4ab8c0c02f30da879
   - enabled: 1
-    path: Assets/Scenes/Instrument Sence.unity
-    guid: 228872512a9e58f4992200badaa8f492
+    path: Assets/Scenes/Natural.unity
+    guid: c4c0d5f90539dfa46bfbebb72354d917
   - enabled: 1
-    path: Assets/Scenes/Classical Music Sence.unity
-    guid: 5edd7913cec87674b98b40838fd9b979
-  - enabled: 1
-    path: Assets/Scenes/Bird Singing Sence.unity
-    guid: 155d992e7a91df44a9692f92f292fee1
+    path: Assets/Scenes/Personalized.unity
+    guid: 406e70f2d58ecfb42b94ce5a61269168
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 079da4db13df6274fa47520f01596a9c, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 098cfb7954a9e224488afcf11835e420, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: b8f5d798466a1e94d9e02b9e8f9353ca, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3f50bd828ebbe554ab1b69e835da30c4, type: 2}
