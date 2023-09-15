@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class MicrophoneRecording : MonoBehaviour
 {
-    public void Start()
+   void Start()
     {
         
     }
-    public AudioClip cilpRecording;
+    public AudioClip clipRecording;
+    public AudioSource clipSource;
+    private bool isRecording = false;
  
-    public void Update()
+   void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha4)) {
-            cilpRecording = Microphone.Start(Microphone.devices[0], false, 10, 44000);
+            isRecording = true;
+            clipRecording = Microphone.Start(Microphone.devices[0], false, 10, 44000);
+            clipSource.clip = clipRecording;
+        }
+
+    }
+    public void StopRecording() {
+        if (isRecording) {
+            Microphone.End(Microphone.devices[0]);
+            isRecording = false;
+        
         }
     }
 }
