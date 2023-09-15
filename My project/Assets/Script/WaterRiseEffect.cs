@@ -25,6 +25,14 @@ public class WaterRiseEffect : MonoBehaviour
         this.riseSpeed = this.parentHeight / this.fillTime;
     }
 
+    public void toggleFill() {
+        if (this.isRising) {
+            resetFill();
+        } else {
+            startFill();
+        }
+    }
+
     private void Update()
     {
         if (this.isRising) {
