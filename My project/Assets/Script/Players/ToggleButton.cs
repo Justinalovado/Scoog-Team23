@@ -47,7 +47,7 @@ public class ToggleButton : MonoBehaviour, IDropHandler
         AudioSource audioBox = dropped.GetComponent<AudioSource>();
         audioSource.clip = audioBox.clip;
         audioBox.clip = null;
-        dropped.GetComponent<DraggableObject>().resetPosition();
+        dropped.GetComponent<DraggableObject>().ResetPosition();
         dropped.SetActive(false);
     }
 }
