@@ -33,9 +33,7 @@ public class InstructionPanel : MonoBehaviour
 
     public void ClickReturnButton()
     {
-        // onclick return to main scene
         GameObject instruction = GameObject.FindGameObjectWithTag("instruction").gameObject;
         instruction.transform.GetChild(0).gameObject.SetActive(false);
-
     }
 }

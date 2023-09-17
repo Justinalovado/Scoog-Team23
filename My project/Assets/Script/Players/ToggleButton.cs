@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ToggleButton : MonoBehaviour
+public class ToggleButton : MonoBehaviour, IDropHandler
 {
     // Reference to the Toggle component
     private Toggle toggle;
@@ -38,5 +39,15 @@ public class ToggleButton : MonoBehaviour
         toggleGraphic.sprite = isOn ? onSprite : offSprite;
         // on change, register state in SoundTrackManger
         this.Manager.lodgeStateChange(isOn, this.ID);
+    }
+
+    public void OnDrop(PointerEventData eventData) {
+        Debug.Log("Drop detected");
+        GameObject dropped = eventData.pointerDrag;
+        AudioSource audioBox = dropped.GetComponent<AudioSource>();
+        audioSource.clip = audioBox.clip;
+        audioBox.clip = null;
+        dropped.GetComponent<DraggableObject>().resetPosition();
+        dropped.SetActive(false);
     }
 }

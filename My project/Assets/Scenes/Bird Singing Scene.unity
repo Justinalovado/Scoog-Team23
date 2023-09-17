@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 182273164}
   - component: {fileID: 182273163}
   m_Layer: 5
-  m_Name: Water
+  m_Name: Lava
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.07499695}
+  m_AnchoredPosition: {x: 0, y: 0.07498169}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &182273163
@@ -1173,7 +1173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.90749997, y: 0}
   m_AnchorMax: {x: 1, y: 0.81677747}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -36.6597, y: -192.4552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706021172
@@ -1626,6 +1626,7 @@ GameObject:
   - component: {fileID: 981173024}
   - component: {fileID: 981173023}
   - component: {fileID: 981173025}
+  - component: {fileID: 981173027}
   m_Layer: 5
   m_Name: RecordingContainer
   m_TagString: Untagged
@@ -1786,6 +1787,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &981173027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981173021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d382245f20b3f0a898c27a64bb603a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042693832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,7 +1837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 169, y: 233.50238}
+  m_AnchoredPosition: {x: 173.55096, y: 235.57335}
   m_SizeDelta: {x: 150, y: -523.0048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042693835
@@ -1949,7 +1962,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 39.53894
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -2586,7 +2599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538265667454219730, guid: 6c1270e821471c8e3a7d7e9a7a0e958b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.7356873
+      value: -6.7356567
       objectReference: {fileID: 0}
     - target: {fileID: 2538265667454219730, guid: 6c1270e821471c8e3a7d7e9a7a0e958b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

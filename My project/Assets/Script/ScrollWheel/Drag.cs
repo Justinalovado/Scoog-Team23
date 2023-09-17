@@ -13,8 +13,8 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
     public bool blockX, blockZ;
 
-    private Vector3[] originalPositions; // ±£´æÃ¿ÕÅÍ¼Æ¬µÄÔ­Ê¼Î»ÖÃ
-    private Vector3 originalPosition;    // ÕûÌåÈÝÆ÷µÄÔ­Ê¼Î»ÖÃ
+    private Vector3[] originalPositions; // ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ô­Ê¼Î»ï¿½ï¿½
+    private Vector3 originalPosition;    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­Ê¼Î»ï¿½ï¿½
 
     public int CurrentScene = 0;
     public float CurrentY = 0;
@@ -30,7 +30,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         CurrentX = transform.localPosition.x;
         CurrentZ = transform.localPosition.z;
 
-        Debug.Log(CurrentScene);
+        //Debug.Log(CurrentScene);
         if (CurrentScene != 0)
         {
             transform.localPosition = new Vector3(CurrentX, CurrentY, CurrentZ);
@@ -38,7 +38,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         originalPosition = transform.localPosition;
       
 
-        // »ñÈ¡Ã¿ÕÅÍ¼Æ¬µÄÔ­Ê¼Î»ÖÃ
+        // ï¿½ï¿½È¡Ã¿ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ô­Ê¼Î»ï¿½ï¿½
         originalPositions = new Vector3[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -57,7 +57,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         totalDistance += deltaY;
         //Debug.Log("distance" + totalDistance);
 
-        // ×èÖ¹ÔÚXºÍZÖáÉÏµÄÎ»ÒÆ
+        // ï¿½ï¿½Ö¹ï¿½ï¿½Xï¿½ï¿½Zï¿½ï¿½ï¿½Ïµï¿½Î»ï¿½ï¿½
         float x = blockX ? 0 : transform.localPosition.x;
         float z = blockZ ? 0 : transform.localPosition.z;
 
@@ -81,13 +81,13 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             SceneManager.LoadScene(CurrentScene);
             PlayerPrefs.SetInt("Current Scene", CurrentScene);
             PlayerPrefs.SetFloat("CurrentY", 0f - originalPositions[closestImageIndex].y);
-            PlayerPrefs.Save(); // ±£´æPlayerPrefsÊý¾Ý
+            PlayerPrefs.Save(); // ï¿½ï¿½ï¿½ï¿½PlayerPrefsï¿½ï¿½ï¿½ï¿½
         }
 
         totalDistance = 0;
     }
 
-    // ¼ÆËã×î½üµÄÍ¼Æ¬Ë÷Òý
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
     private int GetClosestImageIndex()
     {
         float minDistance = transform.GetChild(0).position.y - 256f;
