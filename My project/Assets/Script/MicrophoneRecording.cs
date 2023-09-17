@@ -9,7 +9,8 @@ public class MicrophoneRecording : MonoBehaviour
         
     }
     public AudioClip clipRecording;
-    public AudioSource clipSource;
+    [SerializeField]
+    //public AudioSource clipSource;
     private bool isRecording = false;
  
    void Update()
@@ -17,7 +18,7 @@ public class MicrophoneRecording : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha4)) {
             isRecording = true;
             clipRecording = Microphone.Start(Microphone.devices[0], false, 10, 44000);
-            clipSource.clip = clipRecording;
+            //clipSource.clip = clipRecording;
         }
 
     }
