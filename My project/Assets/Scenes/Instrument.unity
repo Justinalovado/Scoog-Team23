@@ -214,9 +214,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   toggle: {fileID: 0}
   toggleGraphic: {fileID: 0}
   audioSource: {fileID: 0}
+=======
+>>>>>>> main
   onSprite: {fileID: 21300000, guid: 5866c0371c1362f1faa24e2a5c454f8a, type: 3}
   offSprite: {fileID: 21300000, guid: b71eea7da94d35da083f9ae842f071b1, type: 3}
   Manager: {fileID: 1540868184}
@@ -365,6 +368,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!1 &188151939
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +422,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> main
 --- !u!1001 &229227726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -689,7 +695,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d3a6030df9e984484cc5737a7765ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   rotation: 0
+=======
+>>>>>>> main
   RotationSpeed: 25
   clockWiseRotations: 1
 --- !u!114 &286745257
@@ -822,6 +831,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &415495987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1041,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491466071}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> main
 --- !u!1 &555327639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1338,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670397527}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &688260306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1418,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688260306}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> main
 --- !u!1 &699137781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1495,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699137781}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!224 &791042924
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1776,6 +1792,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879598605}
   m_CullTransparentMesh: 1
+=======
+--- !u!224 &791042924 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2538265667454219730, guid: 6c1270e821471c8e3a7d7e9a7a0e958b, type: 3}
+  m_PrefabInstance: {fileID: 1439864896}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> main
 --- !u!1 &884366607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1949,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890641774}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &901173987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,6 +2084,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901173987}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> main
 --- !u!1 &931585298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2301,9 +2327,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   toggle: {fileID: 0}
   toggleGraphic: {fileID: 0}
   audioSource: {fileID: 0}
+=======
+>>>>>>> main
   onSprite: {fileID: 21300000, guid: 0debf064bca4995079e50a244b6fa6ec, type: 3}
   offSprite: {fileID: 21300000, guid: 7d0d655c13d0c1efc832e7282aeb9573, type: 3}
   Manager: {fileID: 1540868184}
@@ -2452,6 +2481,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!1 &1077114893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,6 +2590,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -750}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> main
 --- !u!1 &1186244088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,9 +2731,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   toggle: {fileID: 0}
   toggleGraphic: {fileID: 0}
   audioSource: {fileID: 0}
+=======
+>>>>>>> main
   onSprite: {fileID: 21300000, guid: 6f00af44dd8f19a5080d2892c37d4d3d, type: 3}
   offSprite: {fileID: 21300000, guid: ccd2db076b9365adeb17871bb27d87a9, type: 3}
   Manager: {fileID: 1540868184}
@@ -2802,6 +2837,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!1 &1267486847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,6 +3123,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280149755}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> main
 --- !u!1 &1290174879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,9 +3216,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   toggle: {fileID: 0}
   toggleGraphic: {fileID: 0}
   audioSource: {fileID: 0}
+=======
+>>>>>>> main
   onSprite: {fileID: 21300000, guid: 0173cd8b3f1ba5695824a65119e623f1, type: 3}
   offSprite: {fileID: 21300000, guid: 400921bb8f476d88197a6294e3febeae, type: 3}
   Manager: {fileID: 1540868184}
@@ -3459,6 +3500,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1270e821471c8e3a7d7e9a7a0e958b, type: 3}
+<<<<<<< HEAD
 --- !u!1 &1466107319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,6 +3651,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485833991}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> main
 --- !u!1 &1540868182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,6 +3703,7 @@ MonoBehaviour:
   - {fileID: 1568197355}
   - {fileID: 670397529}
   - {fileID: 942803088}
+<<<<<<< HEAD
   clock: 0
   curTick: 0
   nextTick: 
@@ -3670,6 +3715,8 @@ MonoBehaviour:
   - 0
   audioUnitLenEquiv: 0000000000000000000000000000000000000000
   unitLen: 0
+=======
+>>>>>>> main
 --- !u!4 &1540868185
 Transform:
   m_ObjectHideFlags: 0
@@ -3760,6 +3807,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568197353}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1678161114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4040,6 +4088,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800557808}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> main
 --- !u!1 &1834249781
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,9 +4229,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   toggle: {fileID: 0}
   toggleGraphic: {fileID: 0}
   audioSource: {fileID: 0}
+=======
+>>>>>>> main
   onSprite: {fileID: 21300000, guid: 0008db74a3fcf329daf020da6004a18d, type: 3}
   offSprite: {fileID: 21300000, guid: 5ea52330cb842c86b93374a173e7ad64, type: 3}
   Manager: {fileID: 1540868184}
@@ -4282,6 +4335,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!1 &1843637676
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,6 +4448,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -250}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> main
 --- !u!1001 &2013040495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4491,6 +4547,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2309b7612cfbac45b3834cf54fa1c0e, type: 3}
+<<<<<<< HEAD
 --- !u!224 &2013040496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4640,6 +4697,23 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+=======
+--- !u!224 &2013040496 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 825533463329670182, guid: d2309b7612cfbac45b3834cf54fa1c0e, type: 3}
+  m_PrefabInstance: {fileID: 2013040495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2069802919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1530127712415366304, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+  m_PrefabInstance: {fileID: 229227726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2069802923 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2517914781016558814, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+  m_PrefabInstance: {fileID: 229227726}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> main
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

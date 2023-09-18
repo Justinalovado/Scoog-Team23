@@ -1756,6 +1756,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451fd7a2688ab9c4285b889a2faf4f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  cilpRecording: {fileID: 0}
+>>>>>>> main
 --- !u!114 &1508182285
 MonoBehaviour:
   m_ObjectHideFlags: 0
