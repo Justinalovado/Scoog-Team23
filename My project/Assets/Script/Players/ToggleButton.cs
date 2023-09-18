@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ToggleButton : MonoBehaviour, IDropHandler
-{
+public class ToggleButton : MonoBehaviour, IDropHandler {
+    [SerializeField] private AnimationCurve blinkCurve = new AnimationCurve();
     // Reference to the Toggle component
     private Toggle toggle;
 
@@ -41,6 +41,24 @@ public class ToggleButton : MonoBehaviour, IDropHandler
         this.Manager.lodgeStateChange(isOn, this.ID);
     }
 
+    private IEnumerator BlinkCoroutine() {
+        float duration = 1f; // Duration of the move
+        float timePassed = 0f;
+        Color startColor = toggleGraphic.color;
+
+        while (timePassed < duration)
+        {
+            timePassed += Time.deltaTime;
+            float normalizedTime = timePassed / duration;
+            float curveValue = blinkCurve.Evaluate(normalizedTime);
+            Color color = toggleGraphic.color;
+            toggleGraphic.color = new Color(color.r, color.g, color.b, 1 - curveValue);
+            yield return null;
+        }
+
+        toggleGraphic.color = startColor;
+    }
+    
     public void OnDrop(PointerEventData eventData) {
         Debug.Log("Drop detected");
         GameObject dropped = eventData.pointerDrag;
@@ -49,5 +67,7 @@ public class ToggleButton : MonoBehaviour, IDropHandler
         audioBox.clip = null;
         dropped.GetComponent<DraggableObject>().ResetPosition();
         dropped.SetActive(false);
+        StartCoroutine(BlinkCoroutine());
+        this.Manager.reloadAudio();
     }
 }

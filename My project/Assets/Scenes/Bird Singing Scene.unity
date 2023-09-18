@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -214,6 +214,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.008333334
+      value: 0.0023094688
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.24583334
+      value: 0.7921478
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50416666
+      value: 0.49422634
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7708333
+      value: 0.79676676
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916667
+      value: -0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 5866c0371c1362f1faa24e2a5c454f8a, type: 3}
   offSprite: {fileID: 21300000, guid: b71eea7da94d35da083f9ae842f071b1, type: 3}
   Manager: {fileID: 1540868184}
@@ -397,7 +448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.07498169}
+  m_AnchoredPosition: {x: 0, y: 0.07501221}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &182273163
@@ -480,8 +531,16 @@ PrefabInstance:
       value: HelpCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 1530127712415366304, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530127712415366304, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072468307143641397, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517914781016558814, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
       propertyPath: m_Pivot.x
@@ -591,6 +650,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.000030518
       objectReference: {fileID: 0}
+    - target: {fileID: 3423542057072668574, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946642694027537612, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4617082705178336858, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
       propertyPath: m_SizeDelta.x
       value: -1043.4943
@@ -619,6 +686,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.0008544922
       objectReference: {fileID: 0}
+    - target: {fileID: 5386295643624710027, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408058014615900908, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882441763810613129, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6181433988895518514, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -626,6 +705,10 @@ PrefabInstance:
     - target: {fileID: 6700786181884136487, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053270884805866129, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8026066091142319662, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -666,6 +749,14 @@ PrefabInstance:
     - target: {fileID: 8258652031565472847, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -9.225403
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478075273743652870, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509965820102808396, guid: a72de922e502fc6c19372cef2b292dce, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -972,10 +1063,10 @@ RectTransform:
   - {fileID: 1834249782}
   - {fileID: 1290174880}
   - {fileID: 1318240482}
-  - {fileID: 791042924}
-  - {fileID: 2069802923}
   - {fileID: 890641775}
   - {fileID: 699137782}
+  - {fileID: 791042924}
+  - {fileID: 2069802923}
   - {fileID: 706021171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1633,7 +1724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &981173022
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1650,8 +1741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.66, y: -289.2824}
+  m_AnchoredPosition: {x: -0.41400146, y: -0.032043457}
+  m_SizeDelta: {x: -30.899, y: -46.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981173023
 MonoBehaviour:
@@ -1673,9 +1764,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 89c9b89620c5de5e58652d07e1867ace, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1805,18 +1896,51 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.30380967
+      value: 0.73022234
+      inSlope: 1.2011067
+      outSlope: 1.2011067
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  shrinkCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -1876,7 +2000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1914,6 +2038,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.008333334
+      value: 0.0023094688
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.24583334
+      value: 0.7921478
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50416666
+      value: 0.49422634
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7708333
+      value: 0.79676676
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916667
+      value: -0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 0debf064bca4995079e50a244b6fa6ec, type: 3}
   offSprite: {fileID: 21300000, guid: 7d0d655c13d0c1efc832e7282aeb9573, type: 3}
   Manager: {fileID: 1540868184}
@@ -2115,7 +2290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -2201,6 +2376,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.008333334
+      value: 0.0023094688
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.24583334
+      value: 0.7921478
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50416666
+      value: 0.49422634
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7708333
+      value: 0.79676676
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916667
+      value: -0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 6f00af44dd8f19a5080d2892c37d4d3d, type: 3}
   offSprite: {fileID: 21300000, guid: ccd2db076b9365adeb17871bb27d87a9, type: 3}
   Manager: {fileID: 1540868184}
@@ -2339,7 +2565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 729, y: -261.09}
+  m_AnchoredPosition: {x: 739, y: -250}
   m_SizeDelta: {x: 150, y: -559.8169}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290174882
@@ -2354,7 +2580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -2392,6 +2618,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.008333334
+      value: 0.0023094688
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.24583334
+      value: 0.7921478
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50416666
+      value: 0.49422634
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7708333
+      value: 0.79676676
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916667
+      value: -0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 0173cd8b3f1ba5695824a65119e623f1, type: 3}
   offSprite: {fileID: 21300000, guid: 400921bb8f476d88197a6294e3febeae, type: 3}
   Manager: {fileID: 1540868184}
@@ -2557,6 +2834,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0c94b57c3ca4cd0a390dd875de2b798d, type: 3}
+    - target: {fileID: 568404204018358593, guid: 6c1270e821471c8e3a7d7e9a7a0e958b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2538265667454219730, guid: 6c1270e821471c8e3a7d7e9a7a0e958b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2868,7 +3149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -2954,6 +3235,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937fca3e3cf42c317a0c75e052d452cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.008333334
+      value: 0.0023094688
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.24583334
+      value: 0.7921478
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50416666
+      value: 0.49422634
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7708333
+      value: 0.79676676
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916667
+      value: -0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 0008db74a3fcf329daf020da6004a18d, type: 3}
   offSprite: {fileID: 21300000, guid: 5ea52330cb842c86b93374a173e7ad64, type: 3}
   Manager: {fileID: 1540868184}
