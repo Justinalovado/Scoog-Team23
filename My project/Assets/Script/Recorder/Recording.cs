@@ -15,12 +15,7 @@ public class Recording : MonoBehaviour
     private AudioSource audioSource;
     // private AudioClip clip;
     private void Start() {
-        // recordButton.onClick.AddListener(OnRecordButtonPressed);
-        this.audioSource = this.audioObject.GetComponent<AudioSource>();
-        // foreach (var device in Microphone.devices)
-        // {
-        //     Debug.Log("Name: " + device);
-        // }
+        audioSource = audioObject.GetComponent<AudioSource>();
     }
 
     public void OnRecordButtonPressed() {
@@ -36,7 +31,11 @@ public class Recording : MonoBehaviour
         
         isRecording = true;
         recordStartTime = Time.time;
-        this.audioSource.clip = Microphone.Start(null, false, (int)maxRecordTime, 44100);
+        audioSource.clip = Microphone.Start(
+            null, 
+            false, 
+            (int)maxRecordTime, 
+            44100);
     }
     void StopRecording()
     {
@@ -47,15 +46,20 @@ public class Recording : MonoBehaviour
         {
             int samplesRecorded = (int)((Time.time - recordStartTime) * 44100);
         
-            AudioClip newClip = AudioClip.Create("RecordedClip", samplesRecorded, 1, 44100, false);
+            AudioClip newClip = AudioClip.Create(
+                "RecordedClip", 
+                samplesRecorded, 
+                1, 
+                44100, 
+                false);
             float[] data = new float[samplesRecorded];
             audioSource.clip.GetData(data, 0);
             newClip.SetData(data, 0);
             audioSource.clip = newClip;
         }
 
-        this.audioObject.SetActive(true);
-        this.audioSource.Play();
+        audioObject.SetActive(true);
+        audioSource.Play();
     }
     
     void Update() {
