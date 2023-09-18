@@ -11,6 +11,7 @@ public class Recording : MonoBehaviour
     public float maxRecordTime = 5f;
     
     public GameObject audioObject;
+    //public SavWav savWav;
 
     private AudioSource audioSource;
     // private AudioClip clip;
@@ -56,8 +57,9 @@ public class Recording : MonoBehaviour
             audioSource.clip.GetData(data, 0);
             newClip.SetData(data, 0);
             audioSource.clip = newClip;
+            
         }
-
+        SavWav.Save("Testing1",audioSource.clip);
         audioObject.SetActive(true);
         audioSource.Play();
     }
