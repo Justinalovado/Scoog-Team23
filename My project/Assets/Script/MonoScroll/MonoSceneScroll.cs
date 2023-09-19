@@ -37,19 +37,15 @@ public class MonoSceneScroll : MonoBehaviour {
             }
         }
         
-        Vector2 end = new Vector2(1f, 1f);
-        Vector2 shrinkEnd = new Vector2(0.8f, 0.8f);
-        for (int i = 0; i< pos.Length; i++) {
+        Vector2 targetScale;
+        for (int i = 0; i < pos.Length; i++) {
+            Transform child = transform.GetChild(i);
             if (scroll_pos < pos[i] + half_dist && scroll_pos > pos[i] - half_dist) {
-                Transform child = transform.GetChild(i);
-                transform.GetChild(i).localScale = Vector2.Lerp(child.localScale, shrinkEnd, 0.1f);
-                for (int j = 0; j < pos.Length; j++) {
-                    if (j != i) {
-                        Transform otherChild = transform.GetChild(j);
-                        transform.GetChild(j).localScale = Vector2.Lerp(otherChild.localScale, end, 0.1f);
-                    }
-                }
+                targetScale = new Vector2(1f, 1f);
+            } else {
+                targetScale = new Vector2(0.8f, 0.8f);
             }
+            child.localScale = Vector2.Lerp(child.localScale, targetScale, 0.1f);
         }
     }
 }
