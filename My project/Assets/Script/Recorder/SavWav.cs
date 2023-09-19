@@ -27,20 +27,21 @@
 using System;
 using System.IO;
 using UnityEngine;
+using TMPro;
 using System.Collections.Generic;
 
 public static class SavWav {
+	private const int HEADER_SIZE = 44;
 
-	const int HEADER_SIZE = 44;
-
-	public static bool Save(string filename, AudioClip clip) {
+	public static bool Save(string filename, AudioClip clip, TextMeshProUGUI text) {
 		if (!filename.ToLower().EndsWith(".wav")) {
 			filename += ".wav";
 		}
 
-		var filepath = Path.Combine(Application.dataPath, filename);
+		var filepath = Path.Combine(Application.temporaryCachePath, filename);
 						//Path.Combine(Application.persistentDataPath, filename);
 		Debug.Log(filepath);
+		text.text = filepath;
 
 		// Make sure directory exists if user is saving to sub dir.
 		Directory.CreateDirectory(Path.GetDirectoryName(filepath));

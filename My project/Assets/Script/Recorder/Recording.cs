@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Recording : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Recording : MonoBehaviour
     private bool isRecording = false;
     private float recordStartTime;
     public float maxRecordTime = 5f;
+
+    public TextMeshProUGUI text;
     
     public GameObject audioObject;
     //public SavWav savWav;
@@ -59,7 +62,7 @@ public class Recording : MonoBehaviour
             audioSource.clip = newClip;
             
         }
-        SavWav.Save("Testing1",audioSource.clip);
+        SavWav.Save("Testing1",audioSource.clip, text);
         audioObject.SetActive(true);
         audioSource.Play();
     }
