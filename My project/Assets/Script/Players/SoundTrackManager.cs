@@ -60,7 +60,7 @@ public class SoundTrackManager : MonoBehaviour
     public void lodgeStateChange(bool isOn, int Button){
         Debug.Log($"CHANGE BUTTON {Button} STATE TO {isOn}");
         int wait = isQuiet() ? 0 : 1;
-        //TODO: change button state in this.state, Button identifier need consideration
+        //change button state in this.state, Button identifier need consideration
         if (isOn) {
             this.nextTick[Button] = this.curTick + wait;
         }
@@ -69,7 +69,7 @@ public class SoundTrackManager : MonoBehaviour
             this.nextTick[Button] = -1;
         }
         
-        //TODO: if in the end nothing is playing, clear clock
+        //if in the end nothing is playing, clear clock
         if (isQuiet()) {
             resetClock();
         }
@@ -90,7 +90,7 @@ public class SoundTrackManager : MonoBehaviour
      */
     public void Update() {
         // this.clockDisp.text = $"Clock: {this.clock}\nTick: {this.curTick}";
-        // TODO: run progress bar
+        // run progress bar
         for (int i = 0; i < 5; i++){
             // this.counters[i].text = this.audioSources[i].time.ToString();
             this.bars[i].fillAmount = this.audioSources[i].time / this.audioLens[i];
@@ -98,7 +98,7 @@ public class SoundTrackManager : MonoBehaviour
         //if nothing is playing skip
         if (isQuiet()){return;}
         this.tick();
-        //TODO: if any track=nextTick -> schedule play & renew nextTick
+        // if any track=nextTick -> schedule play & renew nextTick
         for (int i = 0; i < 5; i++) {
             if (this.nextTick[i] == curTick) {
                 this.audioSources[i].Play();
@@ -116,5 +116,6 @@ public class SoundTrackManager : MonoBehaviour
         int tick = (int)Math.Floor(this.clock/this.unitLen);
         this.curTick = tick>this.curTick ? tick : this.curTick;
     }
+    
     
 }

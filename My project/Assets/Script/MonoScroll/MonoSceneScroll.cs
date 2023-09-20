@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
 using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -18,6 +19,8 @@ public class MonoSceneScroll : MonoBehaviour {
     private bool functionTriggered = false;
     private int lastOption = -1;
     public GameObject overlay;
+
+    public SoundBank bank;
     
     void Start() {
         scrollbar = scrollbarObject.GetComponent<Scrollbar>();
@@ -68,7 +71,7 @@ public class MonoSceneScroll : MonoBehaviour {
         while (!Input.GetMouseButton(0)) {
             int closestIndex = GetClosestIndex();
             if (closestIndex != lastOption && !functionTriggered && Mathf.Abs(scroll_pos - pos[closestIndex]) <= half_dist) {
-                MyFunction(closestIndex);
+                SwitchMode(closestIndex);
                 functionTriggered = true;
                 lastOption = closestIndex; // Update the lastSnappedIndex once we've snapped
             }
@@ -78,7 +81,8 @@ public class MonoSceneScroll : MonoBehaviour {
         snapCoroutine = null;
     }
 
-    void MyFunction(int i) {
+    void SwitchMode(int i) {
         overlay.SetActive(true);
+        bank.ReplaceAudio(i);
     }
 }

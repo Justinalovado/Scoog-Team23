@@ -12,40 +12,47 @@ public class SoundBank : MonoBehaviour {
     public List<AudioClip> button3Clips = new List<AudioClip>();
     public List<AudioClip> button4Clips = new List<AudioClip>();
 
+    public List<AudioSource> sources = new List<AudioSource>();
+    
     private Dictionary<string, int> modeMap = new Dictionary<string, int>() 
     {
-        {"natural", 0},
-        {"classic", 1},
+        {"natural", 4},
+        {"classic", 3},
         {"bird", 2},
-        {"lofi", 3},
-        {"personalised",4}
+        {"lofi", 1},
+        {"personalised",0}
     };
     
     /**
      * get a clip for a specific mode
      */
-    public AudioClip getClip(int button, string mode) {
+    public AudioClip getClip(int button, int mode) {
         switch (button) {
             case 0:
-                return button0Clips[modeMap[mode]];
+                return button0Clips[mode];
                 break;
             case 1:
-                return button1Clips[modeMap[mode]];
+                return button1Clips[mode];
                 break;
             case 2:
-                return button2Clips[modeMap[mode]];
+                return button2Clips[mode];
                 break;
             case 3:
-                return button3Clips[modeMap[mode]];
+                return button3Clips[mode];
                 break;
             case 4:
-                return button4Clips[modeMap[mode]];
+                return button4Clips[mode];
                 break;
             default:
-                Debug.Log("Cannot identify button");
+                // Debug.Log("Cannot identify button");
                 break;
         }
-
         return null;
+    }
+
+    public void ReplaceAudio(int mode) {
+        for (int i = 0; i < sources.Count; i++) {
+            sources[i].clip = getClip(i, mode);
+        }
     }
 }

@@ -18,7 +18,6 @@ public class Rotate : MonoBehaviour {
         timer += Time.deltaTime;
         if (timer >= maxTime) {
             transform.parent.gameObject.SetActive(false);
-            // gameObject.SetActive(false);
         }
     }
 }
