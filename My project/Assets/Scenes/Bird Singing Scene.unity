@@ -3418,7 +3418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3883,6 +3883,7 @@ GameObject:
   - component: {fileID: 1540868185}
   - component: {fileID: 1540868184}
   - component: {fileID: 1540868183}
+  - component: {fileID: 1540868186}
   m_Layer: 0
   m_Name: SoundTrackManger
   m_TagString: Untagged
@@ -3937,6 +3938,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1540868186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540868182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ee3e78518f158678574b112b1b9e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button0Clips: []
+  button1Clips: []
+  button2Clips: []
+  button3Clips: []
+  button4Clips: []
 --- !u!1 &1568197353
 GameObject:
   m_ObjectHideFlags: 0

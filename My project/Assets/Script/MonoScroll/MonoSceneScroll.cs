@@ -13,11 +13,16 @@ public class MonoSceneScroll : MonoBehaviour {
     private Scrollbar scrollbar;
     private float scroll_pos = 0;
     private float[] pos;
+    
+    private Coroutine snapCoroutine;
+    private bool functionTriggered = false;
+    private int lastOption = -1;
+    public GameObject overlay;
+    
     void Start() {
         scrollbar = scrollbarObject.GetComponent<Scrollbar>();
     }
-
-    // Update is called once per frame
+    
     void Update() {
         pos = new float[transform.childCount];
         float distance = 1f / (pos.Length - 1f);
@@ -28,15 +33,13 @@ public class MonoSceneScroll : MonoBehaviour {
 
         if (Input.GetMouseButton(0)) {
             scroll_pos = scrollbar.value;
-
+            functionTriggered = false;
         } else {
-            foreach (var t in pos) {
-                if (scroll_pos < t + half_dist && scroll_pos > t - half_dist) {
-                    scrollbar.value = Mathf.Lerp(scrollbar.value, t, 0.1f);
-                }
+            if (snapCoroutine == null) {
+                snapCoroutine = StartCoroutine(HandleSnapping(half_dist));
             }
         }
-        
+
         Vector2 targetScale;
         for (int i = 0; i < pos.Length; i++) {
             Transform child = transform.GetChild(i);
@@ -47,5 +50,35 @@ public class MonoSceneScroll : MonoBehaviour {
             }
             child.localScale = Vector2.Lerp(child.localScale, targetScale, 0.1f);
         }
+    }
+    
+    int GetClosestIndex() {
+        int closestIndex = -1;
+        float minDistance = float.MaxValue;
+        for (int i = 0; i < pos.Length; i++) {
+            float dist = Mathf.Abs(scroll_pos - pos[i]);
+            if (dist < minDistance) {
+                closestIndex = i;
+                minDistance = dist;
+            }
+        }
+        return closestIndex;
+    }
+    IEnumerator HandleSnapping(float half_dist) {
+        while (!Input.GetMouseButton(0)) {
+            int closestIndex = GetClosestIndex();
+            if (closestIndex != lastOption && !functionTriggered && Mathf.Abs(scroll_pos - pos[closestIndex]) <= half_dist) {
+                MyFunction(closestIndex);
+                functionTriggered = true;
+                lastOption = closestIndex; // Update the lastSnappedIndex once we've snapped
+            }
+            scrollbar.value = Mathf.Lerp(scrollbar.value, pos[closestIndex], 0.1f);
+            yield return null;
+        }
+        snapCoroutine = null;
+    }
+
+    void MyFunction(int i) {
+        overlay.SetActive(true);
     }
 }
