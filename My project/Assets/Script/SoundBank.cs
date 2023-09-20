@@ -30,19 +30,14 @@ public class SoundBank : MonoBehaviour {
         switch (button) {
             case 0:
                 return button0Clips[mode];
-                break;
             case 1:
                 return button1Clips[mode];
-                break;
             case 2:
                 return button2Clips[mode];
-                break;
             case 3:
                 return button3Clips[mode];
-                break;
             case 4:
                 return button4Clips[mode];
-                break;
             default:
                 // Debug.Log("Cannot identify button");
                 break;
