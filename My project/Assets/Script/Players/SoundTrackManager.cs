@@ -58,7 +58,6 @@ public class SoundTrackManager : MonoBehaviour
      * used by buttons, on state change
      */
     public void lodgeStateChange(bool isOn, int Button){
-        Debug.Log($"CHANGE BUTTON {Button} STATE TO {isOn}");
         int wait = isQuiet() ? 0 : 1;
         //change button state in this.state, Button identifier need consideration
         if (isOn) {

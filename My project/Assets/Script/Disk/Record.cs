@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Toggle = UnityEngine.UI.Toggle;
 
 public class Record : MonoBehaviour {
 
     private bool RecordOngoing = false;
     private float curTime = 0;
-    public float MaxRecordTime = 60;
+    public float MaxRecordTime = 10;
     
     
-    public List<GameObject> Buttons;
+    public List<Toggle> Buttons;
 
     public List<CarveRing> Indicators;
     
@@ -42,6 +44,9 @@ public class Record : MonoBehaviour {
             indicator.setComplete();
         }
         // printRecording();
+        foreach (var button in Buttons) {
+            button.isOn = false;
+        }
     }
     public void startRecording() {
         RecordOngoing = true;
@@ -82,6 +87,16 @@ public class Record : MonoBehaviour {
             Debug.Log($"Button {press.ButtonID} was pressed {press.Time} seconds after init.");
         }
     }
-    
-    
+
+    public List<(float Time, int ButtonID)> getRecording() {
+        return Recording;
+    }
+
+    public float getRecordTime() {
+        return curTime;
+    }
+
+    public float getMaxRecordTime() {
+        return MaxRecordTime;
+    }
 }
