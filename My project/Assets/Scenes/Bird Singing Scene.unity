@@ -347,7 +347,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 5866c0371c1362f1faa24e2a5c454f8a, type: 3}
   offSprite: {fileID: 21300000, guid: b71eea7da94d35da083f9ae842f071b1, type: 3}
-  Indicator: {fileID: 1137531987}
+  Recorder: {fileID: 1129915673}
   Manager: {fileID: 1540868184}
   ID: 2
 --- !u!114 &19232278
@@ -1540,7 +1540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45edb5751f00a6648b93a0387074b78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxRecordTime: 50
   myColor: {r: 0.22745098, g: 0.36862746, b: 0.27450982, a: 1}
 --- !u!1 &555327639
 GameObject:
@@ -1756,8 +1755,8 @@ RectTransform:
   - {fileID: 868670547}
   - {fileID: 785757518}
   - {fileID: 11848096}
-  - {fileID: 492102559}
   - {fileID: 1129915674}
+  - {fileID: 492102559}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3080,7 +3079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45edb5751f00a6648b93a0387074b78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxRecordTime: 50
   myColor: {r: 0.03137255, g: 0.47843137, b: 0.75686276, a: 1}
 --- !u!1 &1042693832
 GameObject:
@@ -3226,7 +3224,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 0debf064bca4995079e50a244b6fa6ec, type: 3}
   offSprite: {fileID: 21300000, guid: 7d0d655c13d0c1efc832e7282aeb9573, type: 3}
-  Indicator: {fileID: 2106506698}
+  Recorder: {fileID: 1129915673}
   Manager: {fileID: 1540868184}
   ID: 0
 --- !u!114 &1042693838
@@ -3385,6 +3383,7 @@ GameObject:
   - component: {fileID: 1129915677}
   - component: {fileID: 1129915676}
   - component: {fileID: 1129915675}
+  - component: {fileID: 1129915678}
   m_Layer: 5
   m_Name: RecordButton
   m_TagString: Untagged
@@ -3399,7 +3398,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129915673}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3455,56 +3454,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2106506702}
-        m_TargetAssemblyTypeName: CarveRing, Assembly-CSharp
-        m_MethodName: toggleRecording
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1027817497}
-        m_TargetAssemblyTypeName: CarveRing, Assembly-CSharp
-        m_MethodName: toggleRecording
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1137531991}
-        m_TargetAssemblyTypeName: CarveRing, Assembly-CSharp
-        m_MethodName: toggleRecording
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 551771658}
-        m_TargetAssemblyTypeName: CarveRing, Assembly-CSharp
-        m_MethodName: toggleRecording
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1337063300}
-        m_TargetAssemblyTypeName: CarveRing, Assembly-CSharp
+      - m_Target: {fileID: 1129915678}
+        m_TargetAssemblyTypeName: Record, Assembly-CSharp
         m_MethodName: toggleRecording
         m_Mode: 1
         m_Arguments:
@@ -3553,6 +3504,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129915673}
   m_CullTransparentMesh: 1
+--- !u!114 &1129915678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129915673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d6591e72e79f32f83123c245ba017f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxRecordTime: 10
+  Buttons: []
+  Indicators:
+  - {fileID: 2106506702}
+  - {fileID: 1027817497}
+  - {fileID: 1137531991}
+  - {fileID: 551771658}
+  - {fileID: 1337063300}
 --- !u!1 &1137531987
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,7 +3612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45edb5751f00a6648b93a0387074b78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxRecordTime: 50
   myColor: {r: 0.87058824, g: 0.42352942, b: 0.19215687, a: 1}
 --- !u!1 &1186244088
 GameObject:
@@ -3835,7 +3805,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 6f00af44dd8f19a5080d2892c37d4d3d, type: 3}
   offSprite: {fileID: 21300000, guid: ccd2db076b9365adeb17871bb27d87a9, type: 3}
-  Indicator: {fileID: 1027817493}
+  Recorder: {fileID: 1129915673}
   Manager: {fileID: 1540868184}
   ID: 1
 --- !u!82 &1186244095
@@ -4168,7 +4138,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 0173cd8b3f1ba5695824a65119e623f1, type: 3}
   offSprite: {fileID: 21300000, guid: 400921bb8f476d88197a6294e3febeae, type: 3}
-  Indicator: {fileID: 1337063296}
+  Recorder: {fileID: 1129915673}
   Manager: {fileID: 1540868184}
   ID: 4
 --- !u!114 &1290174885
@@ -4408,7 +4378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45edb5751f00a6648b93a0387074b78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxRecordTime: 50
   myColor: {r: 0.78431374, g: 0.3019608, b: 0.3019608, a: 1}
 --- !u!1001 &1439864896
 PrefabInstance:
@@ -4925,7 +4894,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   onSprite: {fileID: 21300000, guid: 0008db74a3fcf329daf020da6004a18d, type: 3}
   offSprite: {fileID: 21300000, guid: 5ea52330cb842c86b93374a173e7ad64, type: 3}
-  Indicator: {fileID: 551771654}
+  Recorder: {fileID: 1129915673}
   Manager: {fileID: 1540868184}
   ID: 3
 --- !u!82 &1834249788
@@ -5529,7 +5498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45edb5751f00a6648b93a0387074b78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxRecordTime: 50
   myColor: {r: 0.7647059, g: 0.6862745, b: 0.03137255, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

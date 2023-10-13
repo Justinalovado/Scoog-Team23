@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Button = UnityEngine.UIElements.Button;
 
 public class ToggleButton : MonoBehaviour, IDropHandler {
     [SerializeField] private AnimationCurve blinkCurve = new AnimationCurve();
@@ -12,8 +13,8 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
     private AudioSource audioSource;
     public Sprite onSprite;
     public Sprite offSprite;
-
-    public GameObject Indicator;
+    
+    public GameObject Recorder;
 
     public SoundTrackManager Manager;
 
@@ -32,7 +33,7 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
     {
         toggleGraphic.sprite = isOn ? onSprite : offSprite;
         Manager.lodgeStateChange(isOn, this.ID);
-        Indicator.GetComponent<CarveRing>().setRecordActive(isOn);
+        Recorder.GetComponent<Record>().lodgeRecord(ID, isOn);
     }
 
     private IEnumerator BlinkCoroutine() {
