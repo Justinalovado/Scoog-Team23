@@ -14,6 +14,7 @@ public class Replay : MonoBehaviour {
     private Vector3 DiskDefaultAngle;
     
     public List<(float Time, int ButtonID)> Recording;
+    public List<(float Time, int ButtonID)> ReplayTemplate;
     
     public List<Toggle> Buttons;
     // Start is called before the first frame update
@@ -38,6 +39,7 @@ public class Replay : MonoBehaviour {
         replayLenght = Recorder.getRecordTime();
         replayTime = 0;
         replayOngoing = true;
+        ReplayTemplate = new List<(float Time, int ButtonID)>(Recording);
     }
 
     public void stopReplay() {
@@ -45,19 +47,20 @@ public class Replay : MonoBehaviour {
         foreach (var button in Buttons) {
             button.isOn = false;
         }
+        resetDiskRotation();
     }
 
     public void checkReplay() {
         replayTime += Time.deltaTime;
-        if (Recording.Count > 0)
+        if (ReplayTemplate.Count > 0)
         {
             // Check the first record's time
-            var record = Recording[0];
+            var record = ReplayTemplate[0];
 
             if (record.Time < replayTime) {
                 Buttons[record.ButtonID].isOn = !Buttons[record.ButtonID].isOn;
                 // Remove the record from the list
-                Recording.RemoveAt(0);
+                ReplayTemplate.RemoveAt(0);
             }
         } else if (replayTime > replayLenght) {
             stopReplay();

@@ -1344,6 +1344,7 @@ GameObject:
   - component: {fileID: 492102562}
   - component: {fileID: 492102561}
   - component: {fileID: 492102560}
+  - component: {fileID: 492102563}
   m_Layer: 5
   m_Name: ReplayButton
   m_TagString: Untagged
@@ -1413,7 +1414,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 492102561}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 492102563}
+        m_TargetAssemblyTypeName: Replay, Assembly-CSharp
+        m_MethodName: toggleReplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &492102561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,6 +1465,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492102558}
   m_CullTransparentMesh: 1
+--- !u!114 &492102563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492102558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f57e23ee7a9eb1ba4a71c492bb74c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Recorder: {fileID: 1129915678}
+  Disk: {fileID: 11848095}
+  Buttons:
+  - {fileID: 1042693838}
+  - {fileID: 1186244093}
+  - {fileID: 19232278}
+  - {fileID: 1834249786}
+  - {fileID: 1290174885}
 --- !u!1 &551771654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,7 +2588,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 907600351}
   m_HandleRect: {fileID: 907600350}
   m_Direction: 2
-  m_Value: 1.0000001
+  m_Value: 1
   m_Size: 0.33907086
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3517,7 +3550,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRecordTime: 10
-  Buttons: []
+  Buttons:
+  - {fileID: 1042693838}
+  - {fileID: 1186244093}
+  - {fileID: 19232278}
+  - {fileID: 1834249786}
+  - {fileID: 1290174885}
   Indicators:
   - {fileID: 2106506702}
   - {fileID: 1027817497}
@@ -5222,7 +5260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000255306}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2021001580
