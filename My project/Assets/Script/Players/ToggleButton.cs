@@ -13,6 +13,8 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
     public Sprite onSprite;
     public Sprite offSprite;
 
+    public GameObject Indicator;
+
     public SoundTrackManager Manager;
 
     public int ID;
@@ -30,6 +32,7 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
     {
         toggleGraphic.sprite = isOn ? onSprite : offSprite;
         Manager.lodgeStateChange(isOn, this.ID);
+        Indicator.GetComponent<CarveRing>().setRecordActive(isOn);
     }
 
     private IEnumerator BlinkCoroutine() {

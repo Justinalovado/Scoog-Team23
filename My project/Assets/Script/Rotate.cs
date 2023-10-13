@@ -6,7 +6,7 @@ using UnityEngine;
 public class Rotate : MonoBehaviour {
     private float timer = 0;
 
-    private float maxTime = 0.5f;
+    private float maxTime = 0.1f;
     private void OnEnable() {
         timer = 0;
     }
