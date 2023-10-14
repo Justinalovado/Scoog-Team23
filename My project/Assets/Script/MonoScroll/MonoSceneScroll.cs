@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Net.Mime;
-using System.Numerics;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 using Vector2 = UnityEngine.Vector2;
 
 public class MonoSceneScroll : MonoBehaviour {
@@ -14,6 +11,9 @@ public class MonoSceneScroll : MonoBehaviour {
     private Scrollbar scrollbar;
     private float scroll_pos = 0;
     private float[] pos;
+
+    public List<Texture2D> bgImages;
+    public RawImage bgObject;
     
     private Coroutine snapCoroutine;
     private bool functionTriggered = false;
@@ -83,6 +83,7 @@ public class MonoSceneScroll : MonoBehaviour {
 
     void SwitchMode(int i) {
         overlay.SetActive(true);
+        bgObject.texture = bgImages[i];
         bank.ReplaceAudio(i);
     }
 }

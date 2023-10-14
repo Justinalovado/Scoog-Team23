@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Bird Singing Scene.unity
+    path: Assets/Scenes/Main Scene.unity
     guid: 56a296bff1ca40e219dd5939b7eb904a
   - enabled: 1
     path: Assets/Scenes/Classical.unity
