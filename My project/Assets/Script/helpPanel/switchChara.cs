@@ -11,6 +11,7 @@ public class switchChara : MonoBehaviour
     [SerializeField] private RectTransform[] panels;
     [SerializeField] private static int selectedChara;
     public GameObject exitButton;
+    public GameObject helpButton;
     public GameObject helpPanel;
 
     private RectTransform _currentPanel;
@@ -82,6 +83,7 @@ public class switchChara : MonoBehaviour
         _currentPanel.gameObject.SetActive(false);
         exitButton.SetActive(false);
         helpPanel.SetActive(false);
+        helpButton.SetActive(true);
     }
 
 
@@ -89,6 +91,7 @@ public class switchChara : MonoBehaviour
     {
         helpPanel.SetActive(true);
         exitButton.SetActive(true);
+        helpButton.SetActive(false);
         Awake();
     }
 
