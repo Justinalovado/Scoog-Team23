@@ -33,7 +33,9 @@ using System.Collections.Generic;
 public static class SavWav {
 	private const int HEADER_SIZE = 44;
 
-	public static bool Save(string filename, AudioClip clip, TextMeshProUGUI text) {
+
+	public static bool Save( AudioClip clip, int ID) {
+		string filename = ID.ToString();
 		if (!filename.ToLower().EndsWith(".wav")) {
 			filename += ".wav";
 		}
@@ -41,7 +43,7 @@ public static class SavWav {
 		var filepath = Path.Combine(Application.temporaryCachePath, filename);
 						//Path.Combine(Application.persistentDataPath, filename);
 		Debug.Log(filepath);
-		text.text = filepath;
+		//text.text = filepath;
 
 		// Make sure directory exists if user is saving to sub dir.
 		Directory.CreateDirectory(Path.GetDirectoryName(filepath));

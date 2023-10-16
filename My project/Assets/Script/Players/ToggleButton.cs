@@ -16,7 +16,7 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
     public SoundTrackManager Manager;
 
     public int ID;
-    
+    //public TextMeshProUGUI text;
     private void Start()
     {
         // Get the Toggle component attached to this GameObject
@@ -60,5 +60,9 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
         dropped.SetActive(false);
         StartCoroutine(BlinkCoroutine());
         Manager.reloadAudio();
+
+        SavWav.Save(audioSource.clip, ID);
+        //string cachePath = Application.temporaryCachePath;
+        //string audioFilePath = Path.Combine(cachePath, "myAudio.clip");
     }
 }

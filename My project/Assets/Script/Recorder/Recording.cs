@@ -11,7 +11,7 @@ public class Recording : MonoBehaviour
     private float recordStartTime;
     public float maxRecordTime = 5f;
 
-    public TextMeshProUGUI text;
+    //public TextMeshProUGUI text;
     
     public GameObject audioObject;
     //public SavWav savWav;
@@ -62,7 +62,7 @@ public class Recording : MonoBehaviour
             audioSource.clip = newClip;
             
         }
-        SavWav.Save("Testing1",audioSource.clip, text);
+        //SavWav.Save("Testing1",audioSource.clip, text);
         audioObject.SetActive(true);
         audioSource.Play();
     }
