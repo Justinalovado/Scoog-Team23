@@ -64,7 +64,7 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
         dropped.GetComponent<DraggableObject>().ResetPosition();
         dropped.SetActive(false);
         StartCoroutine(BlinkCoroutine());
-        sb.StoreAudio(ID, audioBox.clip);
+        sb.StoreAudio(ID, audioSource.clip);
         Manager.reloadAudio();
     }
 }

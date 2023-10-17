@@ -18,11 +18,13 @@ public class SoundTrackManager : MonoBehaviour
     private float[] audioLens = new float[5];
     private int[] audioUnitLenEquiv = new int[5];
     private float unitLen;
-    
+
+    public SoundBank sb;
     /**
      * on load, calibrate audio length
      */
     public void reloadAudio(){
+        sb.LoadAllPersonal();
         for (int i = 0; i < 5; i++){
             audioLens[i] = audioSources[i].clip.length;
         }

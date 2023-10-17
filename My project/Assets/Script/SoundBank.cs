@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class SoundBank : MonoBehaviour {
     // public List<List<AudioClip>> audioClipLists = new List<List<AudioClip>>();
@@ -12,6 +15,8 @@ public class SoundBank : MonoBehaviour {
     public List<AudioClip> button3Clips = new List<AudioClip>();
     public List<AudioClip> button4Clips = new List<AudioClip>();
 
+    // public List<List<AudioClip>> buttonAudioList = new List<List<AudioClip>>();
+    
     public List<AudioSource> sources = new List<AudioSource>();
     
     private Dictionary<string, int> modeMap = new Dictionary<string, int>() 
@@ -44,6 +49,8 @@ public class SoundBank : MonoBehaviour {
         }
         return null;
     }
+    
+    
 
     public void ReplaceAudio(int mode) {
         for (int i = 0; i < sources.Count; i++) {
@@ -68,9 +75,32 @@ public class SoundBank : MonoBehaviour {
             case 4:
                 button4Clips[0] = clip;
                 break;
-            default:
-                // Debug.Log("Cannot identify button");
-                break;
         }
+        SavWav.Save(clip, button);
+    }
+
+
+    public void LoadAllPersonal() {
+        LoadPersonalisedAudio(button0Clips, 0);
+        LoadPersonalisedAudio(button1Clips, 1);
+        LoadPersonalisedAudio(button2Clips, 2);
+        LoadPersonalisedAudio(button3Clips, 3);
+        LoadPersonalisedAudio(button4Clips, 4);
+    }
+    
+    private void LoadPersonalisedAudio(List<AudioClip> button_X_Clips, int button){
+        string path = Application.temporaryCachePath;
+        string audiopath = Path.Combine(path,button.ToString());
+        audiopath = $"{audiopath}.wav";
+        Debug.Log($"audiopath: {audiopath}");
+        AudioClip clip = LoadAudioClipFromPath(path);
+        button_X_Clips[0] = clip;
+    }
+    private AudioClip LoadAudioClipFromPath(string path)
+    {
+        // WWW www = new WWW("file://" + path);
+        // while (!www.isDone) { }
+        // return www.GetAudioClip();
+        return SavWav.LoadWavFile(path);
     }
 }
