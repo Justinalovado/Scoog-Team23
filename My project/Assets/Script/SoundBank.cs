@@ -50,4 +50,27 @@ public class SoundBank : MonoBehaviour {
             sources[i].clip = getClip(i, mode);
         }
     }
+
+    public void StoreAudio(int button, AudioClip clip) {
+        switch (button) {
+            case 0:
+                button0Clips[0] = clip;
+                break;
+            case 1:
+                button1Clips[0] = clip;
+                break;
+            case 2:
+                button2Clips[0] = clip;
+                break;
+            case 3:
+                button3Clips[0] = clip;
+                break;
+            case 4:
+                button4Clips[0] = clip;
+                break;
+            default:
+                // Debug.Log("Cannot identify button");
+                break;
+        }
+    }
 }

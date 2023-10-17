@@ -17,7 +17,8 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
     public GameObject Recorder;
 
     public SoundTrackManager Manager;
-
+    public SoundBank sb;
+    
     public int ID;
     
     private void Start()
@@ -63,6 +64,7 @@ public class ToggleButton : MonoBehaviour, IDropHandler {
         dropped.GetComponent<DraggableObject>().ResetPosition();
         dropped.SetActive(false);
         StartCoroutine(BlinkCoroutine());
+        sb.StoreAudio(ID, audioBox.clip);
         Manager.reloadAudio();
     }
 }
