@@ -2,9 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Video;
+using UnityEngine.Networking;
 
 public class SoundBank : MonoBehaviour {
     // public List<List<AudioClip>> audioClipLists = new List<List<AudioClip>>();
@@ -78,8 +77,7 @@ public class SoundBank : MonoBehaviour {
         }
         SavWav.Save(clip, button);
     }
-
-
+    
     public void LoadAllPersonal() {
         LoadPersonalisedAudio(button0Clips, 0);
         LoadPersonalisedAudio(button1Clips, 1);
@@ -89,18 +87,34 @@ public class SoundBank : MonoBehaviour {
     }
     
     private void LoadPersonalisedAudio(List<AudioClip> button_X_Clips, int button){
-        string path = Application.temporaryCachePath;
-        string audiopath = Path.Combine(path,button.ToString());
-        audiopath = $"{audiopath}.wav";
-        Debug.Log($"audiopath: {audiopath}");
-        AudioClip clip = LoadAudioClipFromPath(path);
+        string filename = $"{button.ToString()}.wav";
+        Debug.Log($"attempt to load audio: {filename}");
+        AudioClip clip = LoadWavFile(filename);
         button_X_Clips[0] = clip;
     }
-    private AudioClip LoadAudioClipFromPath(string path)
+    public AudioClip LoadWavFile(string filename)
     {
-        // WWW www = new WWW("file://" + path);
-        // while (!www.isDone) { }
-        // return www.GetAudioClip();
-        return SavWav.LoadWavFile(path);
+        // string path = Path.Combine(Application.temporaryCachePath, filename);
+        string path = Path.Combine(Application.persistentDataPath, filename);
+        if (!File.Exists(path)) {
+            Debug.Log($"Audio does not exist at: {path}");
+            return CreateSilentClip(5);
+        }
+        AudioClip audioClip = WavUtility.ToAudioClip(path);
+        if (audioClip != null) {
+            return audioClip;
+        } else {
+            Debug.Log($"Failed to load audio at: {path}");
+            return CreateSilentClip(5);
+        }
+    }
+    
+    AudioClip CreateSilentClip(float silenceLength)
+    {
+        int totalSamples = Mathf.FloorToInt(44100 * silenceLength);
+        float[] audioData = new float[totalSamples];
+        AudioClip silentClip = AudioClip.Create("SilentClip", totalSamples, 1, 44100, false);
+        silentClip.SetData(audioData, 0);
+        return silentClip;
     }
 }
