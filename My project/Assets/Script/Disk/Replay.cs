@@ -40,6 +40,7 @@ public class Replay : MonoBehaviour {
 
     public void startReplay() {
         RecordButton.interactable = false;
+        diableAllButton();
         Recording = Recorder.getRecording();
         replayLenght = Recorder.getRecordTime();
         replayTime = 0;
@@ -54,6 +55,7 @@ public class Replay : MonoBehaviour {
         }
         replayTime = 0;
         RecordButton.interactable = true;
+        enableAllButton();
     }
 
     public void checkReplay() {
@@ -86,6 +88,17 @@ public class Replay : MonoBehaviour {
         Vector3 rot = DiskDefaultAngle;
         rot.z += 360 * replayTime / MaxReplayTime;
         Disk.transform.eulerAngles = rot;
+    }
+
+    public void diableAllButton() {
+        foreach (var button in Buttons) {
+            button.interactable = false;
+        }
+    }
+    public void enableAllButton() {
+        foreach (var button in Buttons) {
+            button.interactable = true;
+        }
     }
     
 }
