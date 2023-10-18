@@ -1701,6 +1701,7 @@ MonoBehaviour:
   - {fileID: 19232278}
   - {fileID: 1834249786}
   - {fileID: 1290174885}
+  RecordButton: {fileID: 1129915675}
 --- !u!1 &551771654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3736,6 +3737,7 @@ MonoBehaviour:
   exitButton: {fileID: 36024183}
   helpButton: {fileID: 1538575306}
   helpPanel: {fileID: 985892449}
+  recordButton: {fileID: 706021170}
 --- !u!114 &985892451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4336,6 +4338,7 @@ MonoBehaviour:
   - {fileID: 1137531991}
   - {fileID: 551771658}
   - {fileID: 1337063300}
+  ReplayButton: {fileID: 492102560}
 --- !u!1 &1136449919
 GameObject:
   m_ObjectHideFlags: 0
@@ -6018,7 +6021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1697059275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6883,6 +6886,7 @@ MonoBehaviour:
   bgObject: {fileID: 1742186964}
   overlay: {fileID: 785757517}
   bank: {fileID: 1540868186}
+  recordButton: {fileID: 706021170}
 --- !u!1 &2070276175
 GameObject:
   m_ObjectHideFlags: 0

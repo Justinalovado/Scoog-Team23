@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using Toggle = UnityEngine.UI.Toggle;
 
 public class Record : MonoBehaviour {
@@ -19,7 +19,7 @@ public class Record : MonoBehaviour {
     
     public List<(float Time, int ButtonID)> Recording = new List<(float, int)>();
 
-    
+    public Button ReplayButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,8 +47,11 @@ public class Record : MonoBehaviour {
         foreach (var button in Buttons) {
             button.isOn = false;
         }
+
+        ReplayButton.interactable = true;
     }
     public void startRecording() {
+        ReplayButton.interactable = false;
         RecordOngoing = true;
         curTime = 0;
         foreach (CarveRing indicator in Indicators) {

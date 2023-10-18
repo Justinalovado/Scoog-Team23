@@ -6,8 +6,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class SoundBank : MonoBehaviour {
-    // public List<List<AudioClip>> audioClipLists = new List<List<AudioClip>>();
-
     public List<AudioClip> button0Clips = new List<AudioClip>();
     public List<AudioClip> button1Clips = new List<AudioClip>();
     public List<AudioClip> button2Clips = new List<AudioClip>();

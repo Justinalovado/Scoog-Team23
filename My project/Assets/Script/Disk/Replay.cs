@@ -17,6 +17,10 @@ public class Replay : MonoBehaviour {
     public List<(float Time, int ButtonID)> ReplayTemplate;
     
     public List<Toggle> Buttons;
+
+    
+    public Button RecordButton;
+    
     // Start is called before the first frame update
     void Start() {
         MaxReplayTime = Recorder.getMaxRecordTime();
@@ -35,6 +39,7 @@ public class Replay : MonoBehaviour {
     }
 
     public void startReplay() {
+        RecordButton.interactable = false;
         Recording = Recorder.getRecording();
         replayLenght = Recorder.getRecordTime();
         replayTime = 0;
@@ -47,7 +52,8 @@ public class Replay : MonoBehaviour {
         foreach (var button in Buttons) {
             button.isOn = false;
         }
-        resetDiskRotation();
+        replayTime = 0;
+        RecordButton.interactable = true;
     }
 
     public void checkReplay() {
@@ -70,20 +76,16 @@ public class Replay : MonoBehaviour {
     public void toggleReplay() {
         if (replayOngoing) {
             stopReplay();
+            updateDiskRotation();
         }
         else {
             startReplay();
         }
     }
-
     public void updateDiskRotation() {
         Vector3 rot = DiskDefaultAngle;
         rot.z += 360 * replayTime / MaxReplayTime;
         Disk.transform.eulerAngles = rot;
-    }
-
-    public void resetDiskRotation() {
-        Disk.transform.eulerAngles = DiskDefaultAngle;
     }
     
 }
