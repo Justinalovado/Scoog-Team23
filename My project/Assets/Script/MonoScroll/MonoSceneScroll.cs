@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
-using Image = UnityEngine.UI.Image;
+using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UIElements.Image;
 using Vector2 = UnityEngine.Vector2;
 
 public class MonoSceneScroll : MonoBehaviour {
@@ -21,6 +22,8 @@ public class MonoSceneScroll : MonoBehaviour {
     public GameObject overlay;
 
     public SoundBank bank;
+
+    public GameObject recordButton;
     
     void Start() {
         scrollbar = scrollbarObject.GetComponent<Scrollbar>();
@@ -81,9 +84,20 @@ public class MonoSceneScroll : MonoBehaviour {
         snapCoroutine = null;
     }
 
-    void SwitchMode(int i) {
+    void SwitchMode(int mode) {
         overlay.SetActive(true);
-        bgObject.texture = bgImages[i];
-        bank.ReplaceAudio(i);
+        bgObject.texture = bgImages[mode];
+        bank.ReplaceAudio(mode);
+        recordButton.SetActive(mode==0);
+        // toggleRecordButton(mode);
     }
+
+    // public void toggleRecordButton(int mode) {
+    //     if (mode == 0) {
+    //         recordButton.SetActive(false);
+    //     } else {
+    //         recordButton  
+    //     }
+    // }
+    
 }

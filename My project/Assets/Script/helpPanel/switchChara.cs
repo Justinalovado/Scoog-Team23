@@ -16,6 +16,9 @@ public class switchChara : MonoBehaviour
 
     private RectTransform _currentPanel;
 
+    public GameObject recordButton;
+    private bool wasRecordButtonActive;
+    
     private void Awake()
     {
         // Ensure only one panel in switch group is active (first by default).
@@ -26,39 +29,27 @@ public class switchChara : MonoBehaviour
         // Then set first to the active panel (if applicable).
         _currentPanel = this.panels[0];
         _currentPanel.gameObject.SetActive(true);
-        //int initialIndex = getIndex();
-        //Debug.LogFormat($"index: {initialIndex}");
-        //helpPanel.SetActive(false);
-
+        wasRecordButtonActive = recordButton.activeInHierarchy;
+        recordButton.SetActive(true);
         
     }
 
     private void Start()
     {
         exitButton.SetActive(true);
-        //helpPanel.transform.SetAsLastSibling();
     }
 
     // see next character
     public void NextChara()
     {
-        /* if (!this.panels.Contains(panel))
-        {
-            Debug.LogWarning("Cannot switch to untracked panel.");
-            return;
-        }
-        */
         int index;
 
         _currentPanel.gameObject.SetActive(false); //turn off current panel
         // lock on to next panel and display
         if(this._currentPanel){
             index = getIndex();
-            
             _currentPanel = this.panels[index + 1];
-            //Debug.LogFormat($"index: {index}");
             _currentPanel.gameObject.SetActive(true);
-            //_currentPanel.SetAsLastSibling();
         }         
     }
 
@@ -84,6 +75,7 @@ public class switchChara : MonoBehaviour
         exitButton.SetActive(false);
         helpPanel.SetActive(false);
         helpButton.SetActive(true);
+        recordButton.SetActive(wasRecordButtonActive);
     }
 
 
