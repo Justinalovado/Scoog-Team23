@@ -42,7 +42,7 @@ public class MonoSceneScroll : MonoBehaviour {
             functionTriggered = false;
         } else {
             if (snapCoroutine == null) {
-                snapCoroutine = StartCoroutine(HandleSnapping(half_dist));
+                    snapCoroutine = StartCoroutine(HandleSnapping(half_dist));
             }
         }
 

@@ -12,7 +12,7 @@ public class SoundTrackManager : MonoBehaviour
     public List<AudioSource> audioSources;
     // public List<TextMeshProUGUI> counters; //TODO:replace with circle bars
     public List<Image> bars;
-    private double clock = 0.0;
+    private double clock = 0.0; 
     private int curTick = 0;
     private List<int> nextTick = new List<int>();
     private float[] audioLens = new float[5];
